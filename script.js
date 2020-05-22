@@ -102,10 +102,23 @@ saveButton.on("click", function(event){
     var userEvent = $(".block-event").val();
     var userEventTen = $(".block-event-10").val();
     var userEventEleven = $(".block-event-11").val();
+    var userEventNoon = $(".block-event-12").val();
+    var userEventOne = $(".block-event-1").val();
+    var userEventTwo = $(".block-event-2").val();
+    var userEventThree = $(".block-event-3").val();
+    var userEventFour = $(".block-event-4").val();
+    var userEventFive = $(".block-event-5").val();
 
     localStorage.setItem("userEvent", userEvent);
     localStorage.setItem("userEventTen", userEventTen);
     localStorage.setItem("userEventEleven", userEventEleven);
+    localStorage.setItem("userEventNoon", userEventNoon);
+    localStorage.setItem("userEventOne", userEventOne);
+    localStorage.setItem("userEventTwo", userEventTwo);
+    localStorage.setItem("userEventThree", userEventThree);
+    localStorage.setItem("userEventFour", userEventFour);
+    localStorage.setItem("userEventFive", userEventFive);
+
     console.log("submitted")
     renderUserEvents();
 })
@@ -114,28 +127,22 @@ function renderUserEvents() {
     var userEvent = localStorage.getItem("userEvent");
     var userEventTen = localStorage.getItem("userEventTen");
     var userEventEleven = localStorage.getItem("userEventEleven");
-    // if(userEvent === null){
-    //     return;
-    // }
+    var userEventNoon = localStorage.getItem("userEventNoon");
+    var userEventOne = localStorage.getItem("userEventOne");
+    var userEventTwo = localStorage.getItem("userEventTwo");
+    var userEventThree = localStorage.getItem("userEventThree");
+    var userEventFour = localStorage.getItem("userEventFour");
+    var userEventFive = localStorage.getItem("userEventFive");
     $("#9").text(userEvent);
     $("#10").text(userEventTen);
     $("#11").text(userEventEleven);
+    $("#12").text(userEventNoon);
+    $("#1").text(userEventOne);
+    $("#2").text(userEventTwo);
+    $("#3").text(userEventThree);
+    $("#4").text(userEventFour);
+    $("#5").text(userEventFive);
 }
-
+// Functions
 setTimeBlockValue();
 renderUserEvents();
-
-// var timeBlockHour = parseInt($("#time-block").text());
-// // console.log(timeBlockHour);
-
-// $('textarea').each(function(i){
-//     // Performs tasks to each of the links
-//     $(this).addClass("present");
-//     console.log(this);
-// });
-
-//    $.each(timeBlockObj, function(timeKey, timeValue){
-//         // console.log(timeKey);
-//         // console.log(timeValue);
-        
-//     });
