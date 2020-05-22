@@ -1,6 +1,5 @@
 var currentTime = moment().hours();
-var hour = new Date();
-var timeBlock = $("")
+var saveButton = $("#save-button");
 console.log(currentTime);
 
 // Display Current Day/Time
@@ -31,7 +30,6 @@ function setTimeBlockValue(){
     let Four = timeBlockObj["4 PM"];
     let Five = timeBlockObj["5 PM"];
     
-    console.log(Ten, Eleven, Noon, One, Two, Three, Four, Five);
     //9
     if(Nine === currentTime){
         $("#9").addClass("present");
@@ -97,7 +95,28 @@ function setTimeBlockValue(){
         $("#5").addClass("future");}           
 }
 
+//Save Button On Click
+saveButton.on("click", function(event){
+    event.preventDefault();
+
+    var userEvent = document.querySelector(".block-event").value;
+
+    localStorage.setItem("userEvent", userEvent);
+    console.log("submitted")
+    renderUserEvents();
+})
+// Render Timeblock Events
+function renderUserEvents() {
+    var userEvent = localStorage.getItem("userEvent");
+    if(userEvent === null){
+        return;
+    }
+    $(".block-event").text(userEvent);
+}
+
 setTimeBlockValue();
+renderUserEvents();
+
 
 // var timeBlockHour = parseInt($("#time-block").text());
 // // console.log(timeBlockHour);
@@ -113,23 +132,3 @@ setTimeBlockValue();
 //         // console.log(timeValue);
         
 //     });
-
-
-//.each function() psuedocode
-//Loop through each div with class .hour
-// add class .present to <textarea> if ...
-    // timeBlockHour === currentTime
-// add class .past to <textarea> if ...
-    // timeBlockHour < currentTime
-// add class .future to <textarea> if ...
-    // timeBlockHour > currentTime
-
-//Display Past, Present, and Future Classes
-// if(timeBlockHour === currentTime){
-//     $("textarea").addClass("present");
-//     console.log("Current time");
-// }if(timeBlockHour < currentTime){
-//     //$("textarea").removeClass("present");
-//     $("textarea").addClass("past");
-//     console.log("Past time");
-// }
