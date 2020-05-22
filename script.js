@@ -32,14 +32,69 @@ function setTimeBlockValue(){
     let Five = timeBlockObj["5 PM"];
     
     console.log(Ten, Eleven, Noon, One, Two, Three, Four, Five);
-    
+    //9
     if(Nine === currentTime){
         $("#9").addClass("present");
     } else if(Nine < currentTime){
         $("#9").addClass("past");
     } else if(Nine > currentTime){
         $("#9").addClass("future");}
-    
+    //10
+    if(Ten === currentTime){
+        $("#10").addClass("present");
+    } else if(Ten < currentTime){
+        $("#10").addClass("past");
+    } else if(Ten > currentTime){
+        $("#10").addClass("future");}
+    //11
+    if(Eleven === currentTime){
+        $("#11").addClass("present");
+    } else if(Eleven < currentTime){
+        $("#11").addClass("past");
+    } else if(Eleven > currentTime){
+        $("#11").addClass("future");}
+    //Noon
+    if(Noon === currentTime){
+        $("#12").addClass("present");
+    } else if(Noon < currentTime){
+        $("#12").addClass("past");
+    } else if(Noon > currentTime){
+        $("#12").addClass("future");}
+    //1
+    if(One === currentTime){
+        $("#1").addClass("present");
+    } else if(One < currentTime){
+        $("#1").addClass("past");
+    } else if(One > currentTime){
+        $("#1").addClass("future");}
+    //2
+    if(Two === currentTime){
+        $("#2").addClass("present");
+    } else if(Two < currentTime){
+        $("#2").addClass("past");
+    } else if(Two > currentTime){
+        $("#2").addClass("future");}   
+    //3
+    if(Three === currentTime){
+        $("#3").addClass("present");
+    } else if(Three < currentTime){
+        $("#3").addClass("past");
+    } else if(Three > currentTime){
+        $("#3").addClass("future");}
+    //4
+    if(Four === currentTime){
+        $("#4").addClass("present");
+    } else if(Four < currentTime){
+        $("#4").addClass("past");
+    } else if(Four > currentTime){
+        $("#4").addClass("future");}  
+    //5
+    if(Five === currentTime){
+        $("#5").addClass("present");
+    } else if(Five < currentTime){
+        $("#5").addClass("past");
+    } else if(Five > currentTime){
+        $("#5").addClass("future");}           
 }
 
 setTimeBlockValue();
