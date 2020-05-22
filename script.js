@@ -1,5 +1,5 @@
 var currentTime = moment().hours();
-var saveButton = $("#save-button");
+var saveButton = $(".saveBtn");
 console.log(currentTime);
 
 // Display Current Day/Time
@@ -99,24 +99,31 @@ function setTimeBlockValue(){
 saveButton.on("click", function(event){
     event.preventDefault();
 
-    var userEvent = document.querySelector(".block-event").value;
+    var userEvent = $(".block-event").val();
+    var userEventTen = $(".block-event-10").val();
+    var userEventEleven = $(".block-event-11").val();
 
     localStorage.setItem("userEvent", userEvent);
+    localStorage.setItem("userEventTen", userEventTen);
+    localStorage.setItem("userEventEleven", userEventEleven);
     console.log("submitted")
     renderUserEvents();
 })
 // Render Timeblock Events
 function renderUserEvents() {
     var userEvent = localStorage.getItem("userEvent");
-    if(userEvent === null){
-        return;
-    }
-    $(".block-event").text(userEvent);
+    var userEventTen = localStorage.getItem("userEventTen");
+    var userEventEleven = localStorage.getItem("userEventEleven");
+    // if(userEvent === null){
+    //     return;
+    // }
+    $("#9").text(userEvent);
+    $("#10").text(userEventTen);
+    $("#11").text(userEventEleven);
 }
 
 setTimeBlockValue();
 renderUserEvents();
-
 
 // var timeBlockHour = parseInt($("#time-block").text());
 // // console.log(timeBlockHour);
