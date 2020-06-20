@@ -1,5 +1,5 @@
 ![Website Screenshot](./assets/images/readme-1.png)
- [Work Day Scheduler](https://www.akeemflavors.com/work-day-scheduler)is a simple calendar application that allows the user to save events for each hour of the workday between 9 AM and 5 PM. 
+ [Work Day Scheduler](https://www.akeemflavors.com/work-day-scheduler) is a simple calendar application that allows the user to save events for each hour of the workday between 9 AM and 5 PM. 
 
 ## Table of Contents
 - [Overview](#Overview)
