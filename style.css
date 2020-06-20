@@ -74,4 +74,8 @@ body {
     font-size: 20px;
     transition: all .3s ease-in-out;
   }
+  .work-day-logo{
+    width: 350px;
+    margin-bottom: 20px;
+  }
   
