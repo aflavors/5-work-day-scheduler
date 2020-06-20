@@ -1,4 +1,3 @@
-# 5-work-day-scheduler
 ![Website Screenshot](./assets/images/readme-1.png)
 This application is a simple calendar application that allows the user to save events for each hour of the workday between 9 AM and 5 PM. 
 
